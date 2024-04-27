@@ -1,0 +1,12 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class g extends JFrame {
+
+	g(){
+		this.setDefaultCloseoperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(500,500);
+		this.setLocationRelativeTo(Null);
+		this.setVisibile(true);
+	}
+}
