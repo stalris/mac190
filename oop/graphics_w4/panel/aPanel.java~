@@ -1,0 +1,48 @@
+package panel;
+
+import javax.swing.JPanel;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Color;
+
+import java.lang.Math.sqrt;
+
+public class panel_class extends JPanel{
+	
+	int panel_width = 500;
+	int panel_height = 500;
+	int center_x = panel_width / 2;
+	int center_y = panel_height / 2;
+	int length;
+	int height;
+
+	public panel_class(int length){
+		System.out.println("토끼");
+		System.out.println("판으로");
+
+		// These are equilateral triangles of length='length' and height=(length/2)*sqrt(3)
+		this.length = length;
+		this.height = (int) (sqrt(3)*((double)this.length/2))
+		
+		Dimension d = new Dimension(width, height);
+		this.setPreferredSize(d);
+
+	}
+
+	public void paint(Graphics g){
+		Graphics2D graphics = (Graphics2D) g;
+
+		int [] x = {150, 250, 350};
+		int [] y = {300, 150, 300}; 
+		
+		// Calculate the coordinates for each of the triangles based on the center of the panel.
+		System.out.println("center_x:"+center_x);
+		System.out.println("center_y:"+center_y);
+
+			
+
+		graphics.setPaint(Color.green);
+		graphics.fillPolygon(x, y, 3);
+	}
+}
